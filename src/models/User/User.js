@@ -4,6 +4,11 @@ const bcrypt = require("bcrypt");
 
 // Definición del modelo de Usuario
 const Usuario = conn.define("Usuario", {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true, // Se generará automáticamente
+  },
   nombreCompleto: {
     type: DataTypes.STRING,
     allowNull: false, // Campo obligatorio
