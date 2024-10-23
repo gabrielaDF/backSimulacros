@@ -7,6 +7,7 @@ const { conn } = require("./src/db"); // Importa la conexión a la base de datos
 // Importa las rutas
 const registroRoutes = require("./src/routes/user/registerRoute");
 const loginRoutes = require("./src/routes/user/loginRoute");
+const notaRoutes = require("./src/routes/result/result"); // Rutas de notas
 
 const server = express();
 
@@ -18,6 +19,7 @@ server.use(cors());
 // Rutas
 server.use("/api/usuarios", registroRoutes); // Rutas para registro de usuarios
 server.use("/api/usuarios", loginRoutes); // Rutas para login de usuarios
+server.use("/api/result", notaRoutes); // Conecta las rutas de notas
 
 // Sincronización de la base de datos y inicialización del servidor
 const PORT = process.env.PORT || 3001;
