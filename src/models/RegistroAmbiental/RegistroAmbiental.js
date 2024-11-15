@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const { conn } = require("../../db"); // Importa la conexión a la base de datos
-const Usuario = require("./Usuario"); // Asegúrate de importar el modelo de Usuario
+const Usuario = require("../User/User"); // Asegúrate de importar el modelo de Usuario
 
 // Definición del modelo de Registro Ambiental
 const RegistroAmbiental = conn.define("RegistroAmbiental", {
