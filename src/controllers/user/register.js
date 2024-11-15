@@ -2,14 +2,24 @@
 const Usuario = require("../../models/User/User");
 
 const registerUser = async (req, res) => {
-  const { nombreCompleto, correo, contraseña, rol } = req.body;
+  const {
+    nombreCompleto,
+    correo,
+    contraseña,
+    rol,
+    institucionEducativa,
+    grado,
+  } = req.body;
 
   try {
+    // Creación del nuevo usuario 
     const nuevoUsuario = await Usuario.create({
       nombreCompleto,
       correo,
       contraseña,
       rol,
+      institucionEducativa, 
+      grado, 
     });
 
     res

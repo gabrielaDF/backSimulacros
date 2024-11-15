@@ -35,6 +35,14 @@ const Usuario = conn.define("Usuario", {
     type: DataTypes.ENUM("administrador", "institucion", "estudiante"),
     allowNull: false, // El rol es obligatorio
   },
+  institucionEducativa: {
+    type: DataTypes.STRING,
+    allowNull: true, // Este campo no es obligatorio, pero puedes hacerlo obligatorio si lo prefieres
+  },
+  grado: {
+    type: DataTypes.STRING,
+    allowNull: true, // Este campo tampoco es obligatorio, pero puedes cambiarlo si lo deseas
+  },
 });
 
 // Cifrado de la contraseña antes de crear el usuario
