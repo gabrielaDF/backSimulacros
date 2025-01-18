@@ -1,17 +1,9 @@
 const { DataTypes } = require("sequelize");
-const { conn } = require("../../db");
+
 const Usuario = require("../User/User"); // Importa el modelo de Usuario
 
 module.exports = (conn) => {
   const Resultados = conn.define("Resultados", {
-    usuarioId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Usuarios", // Nombre de la tabla de usuarios
-        key: "id",
-      },
-    },
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,

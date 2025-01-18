@@ -42,18 +42,7 @@ module.exports = (conn, DataTypes) => {
       allowNull: false,
       defaultValue: 0,
     },
-    usuarioId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: Usuario,
-        key: "id",
-      },
-    },
   });
-
-  //Usuario.hasMany(RegistroAmbiental, { foreignKey: "usuarioId" });
-  //RegistroAmbiental.belongsTo(Usuario, { foreignKey: "usuarioId" });
 
   return RegistroAmbiental;
 };

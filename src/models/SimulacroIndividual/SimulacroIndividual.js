@@ -10,14 +10,7 @@ module.exports = (conn) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    usuarioId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Usuarios", // Nombre de la tabla de usuarios
-        key: "id",
-      },
-    },
+
     tipoSimulacro: {
       type: DataTypes.ENUM(
         "lecturaCritica",

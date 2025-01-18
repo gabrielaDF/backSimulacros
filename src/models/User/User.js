@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 
 module.exports = (conn, DataTypes) => {
   const Usuario = conn.define("Usuario", {
-    usuarioId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
