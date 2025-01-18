@@ -55,7 +55,7 @@ SimulacroIndividual.belongsTo(Usuario, { foreignKey: "usuarioId" }); // Relació
 module.exports = {
   conn,
   Usuario,
-  //RegistroAmbiental,
+  RegistroAmbiental,
   Resultados,
   SimulacroIndividual,
 };
